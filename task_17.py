@@ -21,16 +21,14 @@ num_list = []
 for i in range(num * 2 + 1):
     num_list.append(random.randint(-num, num))
 print(num_list)
-num_interval = []
-num_interval = interval_input()
 
 while True:
+    num_interval = interval_input()
     if num_interval[1] < len(num_list) and num_interval[0] < num_interval[1] and num_interval[0] > 0:
         break
     else:
         print('Ввели не верный интервал ')
         num_interval.clear()
-        num_interval = interval_input()
 
 num_sum = 0
 for i in range(num_interval[0] - 1, num_interval[1]):
