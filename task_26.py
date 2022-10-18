@@ -1,4 +1,5 @@
 # Задача 26. Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
+from time import time
 
 num = int(input('Введите число '))
 num_list = []
@@ -9,11 +10,9 @@ def fibonachi(n):
         return 1
     return fibonachi(n - 1) + fibonachi(n - 2)
 
-
 fibonachi_line = []
 for i in range(1, num + 1):
     fibonachi_line.append(fibonachi(i))
-revers_fibonachi_line = []
 revers_fibonachi_line = fibonachi_line.copy()
 revers_fibonachi_line.reverse()
 i = -2
