@@ -9,13 +9,13 @@ def random_num_list(size, min_value, max_value):
 
 
 def coefficient(k):
-    coeff = random_num_list(k+1, 0, 100)
+    coeff = random_num_list(k + 1, 0, 100)
     while coeff[k] == 0:
-        coeff.insert(k,int(random.randint(0, 100)))
+        coeff.insert(k, int(random.randint(0, 100)))
     return coeff
 
-def polynomial(coeff):
 
+def polynomial(coeff):
     list_polyn = []
     for i in range(len(coeff)):
         if i >= 2 and coeff[i] != 0:
@@ -25,6 +25,17 @@ def polynomial(coeff):
         elif i == 0 and coeff[i] != 0:
             list_polyn.append(str(coeff[i]))
     list_polyn.reverse()
-    str_polyn='+'.join(list_polyn)
-    str_polyn+='=0'
+    str_polyn = '+'.join(list_polyn)
+    str_polyn += '=0'
     return str_polyn
+
+
+def read_data(filename: str) -> list:
+    with open(filename, "r", encoding="utf-8") as data:
+        a = data.read().split()
+    return a
+
+
+def write_data(filename: str, string_list: list):
+    with open(filename, "w", encoding="utf-8") as data:
+        data.write(" ".join(string_list))
