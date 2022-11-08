@@ -32,26 +32,23 @@ def pars_str(my_str: str) -> list:
     my_list.append(int(my_str[temp:]))
     return my_list
 
-def zn(value:str):
 
-
-
-def run(my_list:list):
-    tmp_list=my_list.copy()
-    idx=0
+def run(my_list: list):
+    tmp_list = my_list.copy()
+    idx = 0
     while idx < len(tmp_list):
         elem = tmp_list[idx]
         if elem == '*':
             tmp_list[idx - 1] *= tmp_list[idx + 1]
             tmp_list.pop(idx)
             tmp_list.pop(idx)
-            idx-=1
+            idx -= 1
         elif elem == '/':
             tmp_list[idx - 1] /= tmp_list[idx + 1]
             tmp_list.pop(idx)
             tmp_list.pop(idx)
-            idx-=1
-        idx+=1
+            idx -= 1
+        idx += 1
     idx = 0
     while idx < len(tmp_list):
         elem = elem = tmp_list[idx]
@@ -65,10 +62,8 @@ def run(my_list:list):
             tmp_list.pop(idx)
             tmp_list.pop(idx)
             idx -= 1
-        idx+=1
+        idx += 1
     return tmp_list[0]
 
 
 print(run(pars_str(my_str)))
-
-

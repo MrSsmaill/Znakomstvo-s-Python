@@ -25,7 +25,7 @@ def unique_set(lst):
     return list(unique)
 
 if __name__ == "__main__":
-    n = 1
+    n = 10
     lst = [randint(-100,100) for _ in range(n)]
 
     t1 = perf_counter()
