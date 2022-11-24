@@ -52,7 +52,8 @@ Model
 2 READ Отобразить запись по ID
 (db: {dict}, id: int -> rec: dict)
 Принимает уникальный ID ввиде цифры
-Vera Krasulina: 3 UPDATE Обновить запись по ID
+
+3 UPDATE Обновить запись по ID
 (db: {dict}, ID: int, new data: str -> rec: dict)
 
 
